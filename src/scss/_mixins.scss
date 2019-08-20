@@ -1,35 +1,35 @@
 // fz 30
-@mixin fz30reg {
+@mixin fz30-reg {
     font-size: 30px;
     line-height: 39px;
 }
 
 @mixin fz30bold {
-    @extend fz30reg;
+    @include fz30reg;
     font-weight: bold;
 }
 
-@mixin fz30boldUpper {
-    @extend fz30reg;
+@mixin fz30bold-upper {
+    @include fz30-reg;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 @mixin fz30boldUpperBold {
-    @extend fz30reg;
+    @include fz30reg;
     font-weight: bold;
     text-transform: uppercase;
     font-weight: bold;
 }
 
 @mixin fz30regUnderLine {
-    @extend fz30reg;
+    @include fz30reg;
     font-weight: bold;
     text-decoration: underline;
 }
 
 @mixin fz30regUpperUnderLine {
-    @extend fz30reg;
+    @include fz30reg;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: underline;
@@ -43,31 +43,31 @@
 }
 
 @mixin fz20bold {
-    @extend fz20reg;
+    @include fz20reg;
     font-weight: bold;
 }
 
 @mixin fz20boldUpper {
-    @extend fz20reg;
+    @include fz20reg;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 @mixin fz20boldUpperBold {
-    @extend fz20reg;
+    @include fz20reg;
     font-weight: bold;
     text-transform: uppercase;
     font-weight: bold;
 }
 
 @mixin fz20regUnderLine {
-    @extend fz20reg;
+    @include fz20reg;
     font-weight: bold;
     text-decoration: underline;
 }
 
 @mixin fz20regUpperUnderLine {
-    @extend fz20reg;
+    @include fz20reg;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: underline;
