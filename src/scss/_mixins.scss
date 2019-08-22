@@ -1,35 +1,28 @@
 // fz 30
-@mixin fz30-reg {
-    font-size: 30px;
-    line-height: 39px;
+@mixin fz-reg($prop) {
+    font-size: $prop;
+    line-height: $prop;
 }
 
-@mixin fz30bold {
-    @include fz30reg;
+@mixin fz-bold($prop) {
+    @include fz-reg($prop);
     font-weight: bold;
 }
 
-@mixin fz30bold-upper {
-    @include fz30-reg;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-@mixin fz30boldUpperBold {
-    @include fz30reg;
+@mixin fz-bold-upper($prop) {
+    @include fz-reg($prop);
     font-weight: bold;
     text-transform: uppercase;
-    font-weight: bold;
 }
 
-@mixin fz30regUnderLine {
-    @include fz30reg;
+@mixin fz-reg-under-line($prop) {
+    @include fz-reg($prop);
     font-weight: bold;
     text-decoration: underline;
 }
 
-@mixin fz30regUpperUnderLine {
-    @include fz30reg;
+@mixin fz-reg-upper-underLine($prop) {
+    @include fz-reg($prop);
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: underline;
@@ -71,4 +64,11 @@
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: underline;
+}
+
+// styles 
+@mixin castom-container {
+    margin: auto;
+    width: 95%;
+    max-width: 1660px;
 }

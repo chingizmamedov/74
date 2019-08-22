@@ -1,0 +1,28 @@
+.object {
+  &__title {
+    @include fz-bold(30px);
+    color: $main;
+    margin-bottom: 20px;
+  }
+  &__subtitle {
+    @include fz-reg(30px);
+    margin-bottom: 20px;
+  }
+  &__head {
+    display: flex;
+  }
+  &__slider {
+    border-radius: 20px;
+    overflow: hidden;
+    max-height: 700px;
+    &_big {
+      width: 100%;
+      height: 60%;
+      overflow: hidden;
+    }
+  }
+}
+
+.object__slider_big .slick-current > div > div > img {
+  width: 100%;
+}

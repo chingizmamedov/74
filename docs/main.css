@@ -1,1 +1,19 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+:before, :after, * {
+  box-sizing: border-box; }
+
+body {
+  background-color: #e1e1e1; }
+
+.header__conatent {
+  display: flex; }
+
+.footer {
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: bold;
+  text-transform: uppercase; }
 
