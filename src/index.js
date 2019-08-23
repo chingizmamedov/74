@@ -15,9 +15,10 @@ $(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     asNavFor: '.object__slider_big',
-    dots: true,
+    dots: false,
     centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
+    variableWidth: true
   });
 
   $('.menu__btn').click(function(){

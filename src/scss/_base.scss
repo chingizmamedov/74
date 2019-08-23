@@ -345,6 +345,8 @@ body {
             & > img {
                 cursor: pointer;
                 transition: .3s;
+                max-width: 40px;
+                max-height: 40px;
                 &:hover {
                     transform: scale(1.1);
                 }
