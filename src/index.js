@@ -4,6 +4,40 @@ import slick from 'slick-carousel'
 
 $(function () {
 
+  $('.recent__slider').not('.slick-initialized').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+
+
   $('.object__slider_big').not('.slick-initialized').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
