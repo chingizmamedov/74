@@ -150,3 +150,40 @@
     width: 100%;
   }
 }
+
+.object__slider__top {
+  position: relative;
+}
+  .prew-btn {
+    position: absolute;
+    background-image: url(#{$url}arr-r.svg);
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    margin: auto;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: .7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .next-btn {
+    position: absolute;
+    background-image: url(#{$url}arr-r.svg);
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin: auto;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    transform: rotate(180deg);
+    cursor: pointer;
+    opacity: .7;
+    &:hover {
+      opacity: 1;
+    }
+  }

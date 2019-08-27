@@ -37,7 +37,6 @@ $(function () {
     ]
   });
 
-
   $('.object__slider_big').not('.slick-initialized').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -52,25 +51,22 @@ $(function () {
     dots: false,
     centerMode: true,
     focusOnSelect: true,
-    variableWidth: true
+    variableWidth: true,
+    prevArrow: $('.prew-btn'),
+    nextArrow: $('.next-btn')
   });
-
   $('.menu__btn').click(function(){
     $(this).children().toggleClass('is-active')
   })
-
   $('.select__display').click(function(){
     $(this).toggleClass('select__display_is-active')
     $(this).find('.select__display_close').toggle()
     $(this).find('.select__display_open').toggle()
     $(this).siblings().toggleClass('select__list_shown')
   })
-
-  $('.select__list__item').click(function () {
+  $(".select__list__item").click(function () {
     $(this).parent().siblings().val($(this).text())
-      // $(this).parent().toggleClass('select__list_shown')
   })
-
   $(window).scroll(function(){
     var headerBotPos = $('.header').offset().top + $('.header').outerHeight() - $(window).scrollTop()
     var footerHtoPos = $('.footer').offset().top - $(window).scrollTop(),
@@ -107,11 +103,11 @@ $(function () {
 
 
   })
-
   $(".card__heart").off('click').click(function(e) {
     // debugger
     e.preventDefault();
     console.log($(this).hasClass("card__heart__favor"))
     $(this).hasClass("card__heart__favor") ? $(this).removeClass('card__heart__favor') : $(this).addClass('card__heart__favor')
   })
+
 })

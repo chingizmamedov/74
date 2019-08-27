@@ -114,6 +114,10 @@ body {
         color: $main;
         width: 100px;
         text-decoration: underline;
+        cursor: pointer;
+        &:hover {
+            color: #225E90;
+        }
         &_is-active {
             margin-bottom: 20px;
         }
@@ -349,11 +353,35 @@ body {
         & > img {
             width: 100%;
         }
+        &__detail {
+            position: absolute;
+            width: 100%;
+            height: 79%;
+            background-color: rgba(0,0,0,.5);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: .3s;
+            &:hover {
+                opacity: 1;
+            }
+            & span {
+                font-size: 20px;
+                line-height: 26px;
+                cursor: pointer;
+                border: 1px solid #fff;
+                padding: 5px 13px;
+                margin-top: 35px;
+            }
+        }
         &__info {
             position: absolute;
             bottom: 0;
             width: 100%;
             padding: 10px;
+            height: 21%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -396,17 +424,23 @@ body {
         max-width: 600px;
         padding: 0 20px;
         margin-right: 20px;
+        &:hover {
+            border: 1px solid rgba(0, 0, 0, 0.6);
+        }
     }
     &__inp:last-child {
         margin-right: 20px;
     }
     &__btn {
-        background-color: $main;
+        background-color: #225E90;
         border-radius: 100px;
         height: 40px;
         width: 200px;
         @include fz-reg(20px);
         color: #fff;
+        &:hover {
+            background-color: $main;
+        }
     }
 }
 // callback block 
@@ -428,23 +462,57 @@ body {
         }
     }
     &__btn {
-        background-color: $main;
+        background-color: #225E90;
         border-radius: 100px;
         height: 40px;
         @include fz-reg(20px);
         color: #fff;
         width: 90%;
         max-width: 600px;
+        &:hover {
+            background-color: #4682B4;
+        }
     }
 }
-.pagination {
-    max-width: 300px;
-    width: 90%;
-    margin: auto;
+.pagination {    
+
     display: flex;
     margin-top: 60px;
     margin-bottom: 60px;
     position: relative;
+    &__wrap {
+        position: relative;
+        max-width: 300px;
+        width: 90%;
+        margin: auto;
+    }
+    &__prew {
+        position: absolute;
+        background-image: url(#{$url}arr-r.svg);
+        width: 40px;
+        height: 40px;
+        right: -74px;
+        top: 0;
+        cursor: pointer;
+        opacity: .8;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__next {
+        position: absolute;
+        background-image: url(#{$url}arr-r.svg);
+        width: 40px;
+        height: 40px;
+        left: -74px;
+        transform: rotate(180deg);
+        top: 0;
+        cursor: pointer;
+        opacity: .8;
+        &:hover {
+            opacity: 1;
+        }
+    }
     &__item {
         width: 60px;
         text-align: center;
@@ -466,25 +534,6 @@ body {
         &:hover:before {
             transform: scale(1);
         }
-    }
-    &:before {
-        position: absolute;
-        content: url(#{$url}arr-r.svg);
-        width: 40px;
-        height: 40px;
-        right: -74px;
-        top: 0;
-        cursor: pointer;
-    }
-    &:after {
-        position: absolute;
-        content: url(#{$url}arr-r.svg);
-        width: 40px;
-        height: 40px;
-        left: -74px;
-        transform: rotate(180deg);
-        top: 0;
-        cursor: pointer;
     }
 }
 /**
@@ -569,6 +618,109 @@ body {
     &__submit {
         max-width: 600px;
     }
+}
+.slick-track {
+    max-height: 580px;
+}
+/**
+    modal
+*/
+.modal {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    height: auto;
+    background-image: url('#{$url}fonmobile2.png');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    &__alert {
+        width: 90%;
+        max-width: 680px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include fz-reg(30px);
+        height: 280px;
+        display: none;
+        &__close {
+            width: 30px;
+            height: 3px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            & img {
+                width: 100%;
+            }
+        }
+    }
+    &__callback {
+        max-width: 660px;
+        min-height: 320px;
+        padding: 20px;
+        top: 13%;
+        position: fixed;
+        display: none;
+        &__title {
+            @include fz-reg(30px);
+            margin-bottom: 15px;
+        }
+        &__inner {
+            margin-left: 40px;
+            text-align: center;
+            & .contact__form__rule {
+                width: 80%;
+            }
+        }
+    }
+    &__find {
+        max-width: 640px;
+        width: 95%;
+        padding: 20px;
+        display: flex;
+        top: 13%;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+        display: none;
+        &__title, &__subtitle {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        &__title {
+            @include fz-bold(30px);
+            color: #4682B4;
+            margin-bottom: 10px;
+        }
+        &__subtitle {
+            @include fz-reg(20px);
+            margin-bottom: 20px;
+        }
+        &__listtitle {
+            @include fz-bold(20px);
+            text-align: left;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.textarea {
+    padding-top: 10px;
+    height: 60px;
+    resize: none;
+}
+
+
+.right-border {
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
 }
 // tester
 .tester {

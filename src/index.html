@@ -13,6 +13,76 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Modal blocks -->
+    <div class="modal modal__alert">
+        <span class="modal__alert__close">
+            <img src="assets/close-btn.svg" alt="">
+        </span>
+        <span>Мы свяжемся с Вами в ближайшее время</span>
+    </div>
+    <div class="modal modal__callback">
+        <span class="modal__alert__close">
+            <img src="assets/close-btn.svg" alt="">
+        </span>
+        <div class="modal__callback__inner d-flex flex-column">
+            <span class="modal__callback__title">Введите личные данные для связи с Вами</span>
+            <input class="search__inp w-100 mb-20" type="text">
+            <input class="search__inp w-100 mb-20" type="text">
+            <button class="search__btn w-100">Обратная связь</button>
+            <a href="#" class="contact__form__rule">*нажимая кнопку, Вы соглашаетесь на обработку ваших персональных данных</a>
+        </div>
+    </div>
+    <div class="modal modal__find">
+        <span class="modal__alert__close">
+            <img src="assets/close-btn.svg" alt="">
+        </span>
+        <span class="modal__find__title">Не нашли подходящий вариант?</span>
+        <span class="modal__find__subtitle">Оставьте заявку и мы сообщим о появлении подходящего варианта</span>
+        <div class="filter__from-to filter__item">
+            <span class="filter__name">Цена:</span>
+            <div class="filter__from-to_inps">
+                <input type="number" class="filter__from-to_inp" placeholder="от">
+                <input type="number" class="filter__from-to_inp" placeholder="до">
+            </div>
+        </div>
+        <input class="search__inp w-100 mb-20" type="text">
+        <input class="search__inp w-100 mb-20" type="text">
+        <div class="d-flex w-100 mb-20">
+            <div class="col-12 col-md-6 right-border">
+                <div class="modal__find__listtitle">Комнаты:</div>
+                <div class="select__list select__list_shown">
+                    <label class="select__list__item">Комната<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                    <label class="select__list__item">Студия<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                    <label class="select__list__item">1 комната<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                    <label class="select__list__item">2 комнаты<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                    <label class="select__list__item">3 комнаты<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                    <label class="select__list__item">4+ комнат<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex justify-content-end">
+                
+                <div class="select__list select__list_shown">
+                    <div class="modal__find__listtitle">Район:</div>
+                    <label class="select__list__item">Центральный<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                    <label class="select__list__item">Курчатовский<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                    <label class="select__list__item">Калининский<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                    <label class="select__list__item">Ленинский<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                    <label class="select__list__item">Металлургический<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                    <label class="select__list__item">Тракторозаводской<input class="checkbox" type="checkbox" name="" id="">
+                            <span class="checkbox__mask"></span>
+                        </label>
+                    <label class="select__list__item">Советский<input class="checkbox" type="checkbox" name="" id="">
+                        <span class="checkbox__mask"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <textarea class="textarea search__inp w-100 mb-20" name="" id="" cols="30" rows="10"></textarea>
+        <textarea class="textarea search__inp w-100 mb-20" name="" id="" cols="30" rows="10"></textarea>
+        <textarea class="textarea search__inp w-100 mb-20" name="" id="" cols="30" rows="10"></textarea>
+        <button class="search__btn w-100">Оставить заявку на подбор</button>
+        <a href="#" class="contact__form__rule">*нажимая кнопку, Вы соглашаетесь на обработку ваших персональных данных</a>
+    </div>
     <!-- Header -->
     <header class="header">
         <div class="container header__container">
@@ -51,8 +121,6 @@
                                     <path class="card__heart__favor" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"/>
                                 </svg>
                             </a>
-
-                            
                         </li>
                         <li class="nav__list__item">
                             <a href="#">КОНТАКТЫ</a>
@@ -194,6 +262,9 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span>Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
@@ -214,6 +285,9 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span>Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
@@ -231,6 +305,9 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span>Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
@@ -248,6 +325,9 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span>Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
@@ -265,6 +345,9 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span>Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
@@ -282,6 +365,9 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span>Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
@@ -299,6 +385,9 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span>Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
@@ -316,6 +405,9 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span>Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
@@ -331,13 +423,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="pagination">
-                    <div class="pagination__item">1</div>
-                    <div class="pagination__item">2</div>
-                    <div class="pagination__item">3</div>
-                    <div class="pagination__item">...</div>
-                    <div class="pagination__item">100</div>
+                <div class="pagination__wrap">
+                    <div class="pagination">
+                        <div class="pagination__item">1</div>
+                        <div class="pagination__item">2</div>
+                        <div class="pagination__item">3</div>
+                        <div class="pagination__item">...</div>
+                        <div class="pagination__item">100</div>
+                    </div>
+                    <div class="pagination__prew"></div>
+                    <div class="pagination__next"></div>
                 </div>
+                
                 <div class="callback__block">
                     <span class="callback__block__title">Не нашли подходящий вариант?</span>
                     <span class="callback__block__subtitle">Оставьте заявку и мы сообщим о появлении подходящего варианта</span>
