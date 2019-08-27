@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="lib/reset.css">
+  <link rel="stylesheet" href="lib/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="lib/slick-theme.css.css">
+  <link rel="stylesheet" href="lib/slick.css">
+  <link rel="stylesheet" href="scss/main.css">
+  <title>Document</title>
+<link href="main.css" rel="stylesheet"></head>
+
+<body>
+    <!-- Header -->
+<header class="header">
+  <div class="container header__container">
+      <div class="col-6 col-sm-3 filter__wrap">
+          <button class="filter__btn">Фильтр</button>
+      </div>
+      <div class="col-12 col-sm-4 col-md-3 header__logo">
+          <a href="#"><img src="assets/logo.svg" class="logo"></a>
+      </div>
+      <a class="col-12 col-sm-3 d-md-none mobile-menu__tel" href="tel:+735123344">+7 (351) 2-33-44</a>
+      <div class="col-6 col-sm-1 mobile-menu__control align-items-center">
+          <div class="menu__btn">
+              <button class="hamburger hamburger--collapse" type="button">
+                  <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                  </span>
+              </button>
+          </div>
+      </div>
+      <div class="col-9 nav__wrap">
+          <nav class="nav">
+              <ul class="nav__list">
+                  <li class="nav__list__item">
+                      <a href="tel:+735123344">+7 (351) 2-33-44</a>
+                  </li>
+                  <li class="nav__list__item">
+                      <a href="#">СПИСКОМ</a>
+                  </li>
+                  <li class="nav__list__item">
+                      <a href="#">НА КАРТЕ</a>
+                  </li>
+                  <li class="nav__list__item">
+                      <a href="#">ИЗБРАННОЕ <img src="assets/heart.svg" alt=""></a>
+                  </li>
+                  <li class="nav__list__item">
+                      <a href="#">КОНТАКТЫ</a>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+</header>
+<!-- Header -->
+<div class="page">
+  <div class="container page__container flex-column">
+    <div class="search col-12 justify-content-center mt-20 mb-20">
+        <input type="text" class="search__inp" placeholder="Поиск по ключевым словам">
+        <button class="search__btn">Найти</button>
+    </div>
+    <div class="col-12 d-flex flex-column">
+      <div class="col-12 contact__map__title">
+        <span class="contact__header__title">74 Метра - аренда квартир в Челябинске</span>
+        <span class="contact__header__title_focus">БЕЗ КОМИСИИ</span>
+      </div>
+      <div class="d-flex flex-column flex-md-row">
+        <div class="contact__map__wrap col-12 order-1 col-md-6 order-sm-0">
+          <div class="contact__map">
+            <img src="assets/contact-map.jpg" alt="" class="contact__map__img">
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-center justify-content-center flex-column text-center">
+            <address class="contact__address"><span class="contact__address__span">Наш адрес:</span> Челябинск, Проспект Ленина
+              дом 11, этаж 2, офис 44</address>
+              <div class="contact__tel">
+                <span class="contact__tel__span">Телефон:</span>
+                <a href="tel:79999999"> +7 (351) 2-33-44</a>
+              </div>
+              <form action="#" class="contact__form d-none d-md-flex flex-column ">
+                <span class="mb-20 d-inline-block contact__form__title">Введите личные данные для связи с Вами</span>
+                <input type="text" class="contact__inp search__inp mb-20 w-100" placeholder="Имя">
+                <input id="phone" type="text" class="contact__inp search__inp mb-20 w-100" placeholder="Телефон">
+                <button class="filter__btn contact__submit w-100" type="submit">Обратная связь</button>
+                <a href="#" class="contact__form__rule">*нажимая кнопку, Вы соглашаетесь на обработку ваших персональных данных</a>
+              </form>
+              <button class="contact__mobile__submit filter__btn d-block d-md-none">Обратная связь</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="container footer__container">
+      <div class="row footer__top">
+          <div class="col-10 col-sm-6 footer__address_wrap">
+              <address class="footer__address">Наш адрес: Челябинск, Проспект Ленина
+                  дом 11, этаж 2, офис 44</address>
+          </div>
+          <div class="col-10 col-sm-6 footer__tel">
+              <span>Телефон: <a href="tel:+0000"> +7 (351) 2-33-44</a></span>
+          </div>
+      </div>
+      <div class="row footer__center">
+          <div class="col-6 col-md-4 footer__copyright">
+              <span>© 2019 «74 Метра»</span>
+          </div>
+          <div class="col-4 footer__logo">
+              <img src="assets/logo.svg" alt="">
+          </div>
+          <div class="col-6 col-md-4 footer__creative">
+              <span>Сайт разработан: CREATIVE</span>
+          </div>
+      </div>
+      <div class="row footer__bottom">
+          <div class="footer__menu">
+              <nav class="nav">
+                  <ul class="nav__list">
+                      <li class="nav__list__item">
+                          <a href="#">СПИСКОМ</a>
+                      </li>
+                      <li class="nav__list__item">
+                          <a href="#">НА КАРТЕ</a>
+                      </li>
+                      <li class="nav__list__item">
+                          <a href="#">ИЗБРАННОЕ <img src="assets/heart.svg" alt=""></a>
+                      </li>
+                      <li class="nav__list__item">
+                          <a href="#">КОНТАКТЫ</a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+      </div>
+  </div>
+</footer>
+<!-- Footer -->
+<script src="https://unpkg.com/imask"></script>
+<script>
+  var element = document.getElementById('phone');
+  var maskOptions = {
+    mask: '+{7}(000)000-00-00'
+  };
+  var mask = IMask(element, maskOptions);
+</script>
+<script src="main.js"></script>
+<script type="text/javascript" src="main.js"></script></body>
+</html>

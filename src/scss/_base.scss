@@ -321,6 +321,23 @@ body {
     background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
+    &__heart {
+        fill-opacity: 0;
+        cursor: pointer;
+        &:hover {
+            fill-opacity: 1;
+            fill: #fff;
+        }
+        &__favor {
+            fill-opacity: 1;
+            fill: #CD5C5C;
+            stroke: #CD5C5C;
+            &:hover {
+            fill-opacity: 1;
+            fill: #CD5C5C;
+        }
+        }
+    }
     &__wrap {
         display: flex;
         justify-content: center;
@@ -347,6 +364,7 @@ body {
                 transition: .3s;
                 max-width: 40px;
                 max-height: 40px;
+                fill: #fff;
                 &:hover {
                     transform: scale(1.1);
                 }

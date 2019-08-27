@@ -67,45 +67,51 @@ $(function () {
   })
 
   $('.select__list__item').click(function () {
-      $(this).parent().siblings().val($(this).text())
+    $(this).parent().siblings().val($(this).text())
       // $(this).parent().toggleClass('select__list_shown')
-    })
+  })
+
+  $(window).scroll(function(){
+    var headerBotPos = $('.header').offset().top + $('.header').outerHeight() - $(window).scrollTop()
+    var footerHtoPos = $('.footer').offset().top - $(window).scrollTop(),
+        filterHeight = $('#filter').outerHeight() + 40
+        if(footerHtoPos > filterHeight) {            
+          $('.filter').css({
+            position: 'absolute',
+            zIndex: '99',
+            bottom: 'unset',
+            top: '20px'
+          })
+        }
+        if(headerBotPos < 0) {
+          $('#filter').css({
+            position: 'fixed'
+          })
+        }
+        if(footerHtoPos < filterHeight) {
+          $('.filter').css({
+            position: 'absolute',
+            zIndex: '99',
+            bottom: '20px',
+            top: 'unset'
+          })
+        }
+        if(headerBotPos > 0) {
+          $('#filter').css({
+            position: 'absolute'
+          })
+        }
+        
 
 
-    $(window).scroll(function(){
-      var headerBotPos = $('.header').offset().top + $('.header').outerHeight() - $(window).scrollTop()
-      var footerHtoPos = $('.footer').offset().top - $(window).scrollTop(),
-          filterHeight = $('#filter').outerHeight() + 40
-          if(footerHtoPos > filterHeight) {            
-            $('.filter').css({
-              position: 'absolute',
-              zIndex: '99',
-              bottom: 'unset',
-              top: '20px'
-            })
-          }
-          if(headerBotPos < 0) {
-            $('#filter').css({
-              position: 'fixed'
-            })
-          }
-          if(footerHtoPos < filterHeight) {
-            $('.filter').css({
-              position: 'absolute',
-              zIndex: '99',
-              bottom: '20px',
-              top: 'unset'
-            })
-          }
-          if(headerBotPos > 0) {
-            $('#filter').css({
-              position: 'absolute'
-            })
-          }
-          
 
 
+  })
 
-
-    })
+  $(".card__heart").off('click').click(function(e) {
+    // debugger
+    e.preventDefault();
+    console.log($(this).hasClass("card__heart__favor"))
+    $(this).hasClass("card__heart__favor") ? $(this).removeClass('card__heart__favor') : $(this).addClass('card__heart__favor')
+  })
 })

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lib/reset.css">
+    <link rel="stylesheet" href="lib/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="lib/slick-theme.css.css">
+    <link rel="stylesheet" href="lib/slick.css">
+    <link rel="stylesheet" href="scss/main.css">
+    <title>Document</title>
+<link href="main.css" rel="stylesheet"></head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__container">
+            <div class="col-6 col-sm-3 filter__wrap">
+                <button class="filter__btn">Фильтр</button>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3 header__logo">
+                <a href="#"><img src="assets/logo.svg" class="logo"></a>
+            </div>
+            <a class="col-12 col-sm-3 d-md-none mobile-menu__tel" href="tel:+735123344">+7 (351) 2-33-44</a>
+            <div class="col-6 col-sm-1 mobile-menu__control align-items-center">
+                <div class="menu__btn">
+                    <button class="hamburger hamburger--collapse" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-9 nav__wrap">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__list__item">
+                            <a href="tel:+735123344">+7 (351) 2-33-44</a>
+                        </li>
+                        <li class="nav__list__item">
+                            <a href="#">СПИСКОМ</a>
+                        </li>
+                        <li class="nav__list__item">
+                            <a href="#">НА КАРТЕ</a>
+                        </li>
+                        <li class="nav__list__item">
+                            <a href="#">ИЗБРАННОЕ <img src="assets/heart.svg" alt=""></a>
+                        </li>
+                        <li class="nav__list__item">
+                            <a href="#">КОНТАКТЫ</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
+    <div class="page">
+      <div class="container page__container flex-column">
+        <div class="search col-12 justify-content-center mt-20 mb-20">
+            <input type="text" class="search__inp" placeholder="Поиск по ключевым словам">
+            <button class="search__btn">Найти</button>
+        </div>
+        <div class="object object_container">
+            <h1 class="object__title">10 000 ₽, 1 - комнатная квартира, площадь 30 м², этаж 2/5</h1>
+            <h2 class="object__subtitle">Центральный район, Проспект Ленина, дом 86</h2>
+            <div class="object__head flex-column">
+                <div class="object__slider__wrap col-12 col-md-6">
+                    <div class="object__slider">
+                        <div class="object__slider_big">
+                            <div class="object__slider_big__item">
+                                <img src="assets/sliderone.jpg" alt="">
+                            </div>
+                            <div class="object__slider_big__item">
+                                    <img src="assets/slidertwo.jpg" alt="">
+                            </div>
+                            <div class="object__slider_big__item">
+                                    <img src="assets/3.jpg" alt="">
+                            </div>
+                            <div class="object__slider_big__item">
+                                    <img src="assets/4.jpg" alt="">
+                            </div>
+                            <div class="object__slider_big__item">
+                                    <img src="assets/5.jpg" alt="">
+                            </div>
+                            <div class="object__slider_big__item">
+                                    <img src="assets/6.jpg" alt="">
+                            </div>
+                            <div class="object__slider_big__item">
+                                    <img src="assets/7.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="suka">
+                            <div>
+                                <img src="assets/sliderone.jpg" alt="">
+                            </div>
+                            <div>
+                                    <img src="assets/slidertwo.jpg" alt="">
+                            </div>
+                            <div>
+                                    <img src="assets/3.jpg" alt="">
+                            </div>
+                            <div>
+                                    <img src="assets/4.jpg" alt="">
+                            </div>
+                            <div>
+                                    <img src="assets/5.jpg" alt="">
+                            </div>
+                            <div>
+                                    <img src="assets/6.jpg" alt="">
+                            </div>
+                            <div>
+                                    <img src="assets/7.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="characters">
+                <div class="conatiner col-10 offset-1">
+                    <div class="row no-gutters">
+                        <div class="col-12 flex-column">
+                            <h3 class="characters__title">Характеристики</h3>
+                            <div class="row no-gutters">
+                                <div class="col-12 col-md-6">
+                                    <table class="characters__table">
+                                        <tr>
+                                            <th class="characters__item">Мебель в комнате:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Кухонная мебель:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Лифт:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Балкон/лоджия:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Стиральная машина:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Холодильник:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <table class="characters__table offset-md-2 mb-4">
+                                        <tr>
+                                            <th class="characters__item">Мебель в комнате:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Кухонная мебель:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Лифт:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Балкон/лоджия:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Стиральная машина:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Холодильник:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="preview">
+                <h3 class="preview__title">Полное описание квартиры</h3>
+                <p class="preview__text">Без комиссии !!! Без комиссии !!! 
+                        Стильная квартира студия.
+                        Полностью укомплектована современной мебелью и техникой!
+                        ЖК - TV, стиральная машина, микроволновка, холодильник.
+                        Кожаная белая 2х-спальная кровать, кожаное белое кресло, шкаф кровать, гардероб, 
+                        кухонный гарнитур + обеденная зона,комод, посуда.
+                        Большая ванная с окном, ламинат, евро окна, застекленная лоджия отделана деревом.
+                        Парковка рядом с домом.
+                        
+                        Стильная квартира студия.
+                        Полностью укомплектована современной мебелью и техникой!
+                        ЖК - TV, стиральная машина, микроволновка, холодильник.
+                        Кожаная белая 2х-спальная кровать, кожаное белое кресло, шкаф кровать, гардероб, кухонный гарнитур + обеденная зона, комод, посуда.
+                        Большая ванная с окном, ламинат, евро окна, застекленная лоджия отделана деревом.
+                        Парковка рядом с домом. Без комиссии !!! 
+                        Стильная квартира студия.
+                        Полностью укомплектована современной мебелью и техникой!
+                        ЖК - TV, стиральная машина, микроволновка, холодильник.
+                        Кожаная белая 2х-спальная кровать, кожаное белое кресло, шкаф кровать, гардероб, кухонный гарнитур + обеденная зона, комод, посуда.
+                        Большая ванная с окном, ламинат, евро окна, застекленная лоджия отделана деревом.
+                        Парковка рядом с до...</p>
+            </div>
+            <div class="contacts__wrap col-12 col-md-5 col-xl-4">
+                <div class="contacts__block d-flex align-items-center">
+                    <div class="contacts">
+                        <div class="contacts__header d-flex align-items-sm-stretch">
+                            <div class="contacts__img">
+                                <img src="assets/user.jpg" alt="">
+                            </div>
+                            <div class="contacts__data d-flex flex-column justify-content-between">
+                                <span class="contacts__name">
+                                    Имя: Анатолий
+                                </span>
+                                <div class="contacts__tel">
+                                    <span>Телефон:</span>
+                                    <a href="tel:+735123344">+7 (351) 2-33-44</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts__footer">
+                            <span class="callback__block__subtitle">Звонки принимаются с 9 до 21 в будни в СБ и ВС - оставьте обратную связь</span>
+                            <button class="callback__btn">Оставить заявку на подбор</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="map">
+                    <img src="assets/user-map.jpg" alt="">
+                </div>
+            </div>
+            
+            <div class="recent">
+                <h3 class="recent__title">Недавно просмотренные объявления</h3>
+                <div class="recent__slider">
+                    <div class="card__wrap">
+                        <div class="card">
+                            <div class="card__header">
+                                <img src="assets/cardimg.jpg" alt="">
+                                <div class="card__header__info">
+                                    <span>10 фото</span>
+                                    <img src="assets/heart-contur.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#" class="card__footer__title">10 000 ₽, 1-комн. квартира, 30 м²</a>
+                                <address class="card__address">Центральный, Проспект Ленина, 86</address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__wrap">
+                        <div class="card">
+                            <div class="card__header">
+                                <img src="assets/cardimg.jpg" alt="">
+                                <div class="card__header__info">
+                                    <span>10 фото</span>
+                                    <img src="assets/heart-contur.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#" class="card__footer__title">10 000 ₽, 1-комн. квартира, 30 м²</a>
+                                <address class="card__address">Центральный, Проспект Ленина, 86</address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__wrap">
+                        <div class="card">
+                            <div class="card__header">
+                                <img src="assets/cardimg.jpg" alt="">
+                                <div class="card__header__info">
+                                    <span>10 фото</span>
+                                    <img src="assets/heart-contur.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#" class="card__footer__title">10 000 ₽, 1-комн. квартира, 30 м²</a>
+                                <address class="card__address">Центральный, Проспект Ленина, 86</address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__wrap">
+                        <div class="card">
+                            <div class="card__header">
+                                <img src="assets/cardimg.jpg" alt="">
+                                <div class="card__header__info">
+                                    <span>10 фото</span>
+                                    <img src="assets/heart-contur.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#" class="card__footer__title">10 000 ₽, 1-комн. квартира, 30 м²</a>
+                                <address class="card__address">Центральный, Проспект Ленина, 86</address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__wrap">
+                        <div class="card">
+                            <div class="card__header">
+                                <img src="assets/cardimg.jpg" alt="">
+                                <div class="card__header__info">
+                                    <span>10 фото</span>
+                                    <img src="assets/heart-contur.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#" class="card__footer__title">10 000 ₽, 1-комн. квартира, 30 м²</a>
+                                <address class="card__address">Центральный, Проспект Ленина, 86</address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="callback__block">
+                <span class="callback__block__title">Не нашли подходящий вариант?</span>
+                <span class="callback__block__subtitle">Оставьте заявку и мы сообщим о появлении подходящего варианта</span>
+                <button class="callback__btn">Оставить заявку на подбор</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+<footer class="footer">
+<div class="container footer__container">
+    <div class="row footer__top">
+        <div class="col-10 col-sm-6 footer__address_wrap">
+            <address class="footer__address">Наш адрес: Челябинск, Проспект Ленина
+                дом 11, этаж 2, офис 44</address>
+        </div>
+        <div class="col-10 col-sm-6 footer__tel">
+            <span>Телефон: <a href="tel:+0000"> +7 (351) 2-33-44</a></span>
+        </div>
+    </div>
+    <div class="row footer__center">
+        <div class="col-6 col-md-4 footer__copyright">
+            <span>© 2019 «74 Метра»</span>
+        </div>
+        <div class="col-4 footer__logo">
+            <img src="assets/logo.svg" alt="">
+        </div>
+        <div class="col-6 col-md-4 footer__creative">
+            <span>Сайт разработан: CREATIVE</span>
+        </div>
+    </div>
+    <div class="row footer__bottom">
+        <div class="footer__menu">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__list__item">
+                        <a href="#">СПИСКОМ</a>
+                    </li>
+                    <li class="nav__list__item">
+                        <a href="#">НА КАРТЕ</a>
+                    </li>
+                    <li class="nav__list__item">
+                        <a href="#">ИЗБРАННОЕ <img src="assets/heart.svg" alt=""></a>
+                    </li>
+                    <li class="nav__list__item">
+                        <a href="#">КОНТАКТЫ</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+</footer>
+    <!-- Footer -->
+    <script src="main.js"></script>
+<script type="text/javascript" src="main.js"></script></body>
+</html>
