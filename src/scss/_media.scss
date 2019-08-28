@@ -1,3 +1,9 @@
+@media screen and (min-width:1200px) {
+  .catalog__header__title, .catalog__header__title_focus {
+    font-size: 30px;
+  }
+}
+
 @media (max-width: 1200px) {
   .contacts {
     &__wrap {
@@ -17,6 +23,12 @@
 }
 
 @media (max-width:769px) {
+  .right-border {
+    border: none;
+  }
+  .modal__find__inner {
+    height: 70vh;
+  }
   .footer {
     &__top {
       flex-direction: column;
@@ -93,6 +105,15 @@
   }
 }
 @media (max-width:576px) {
+  .mobile__menu {
+    top: 166px;
+  }
+  .pagination__prew {
+    right: -20px;
+  }
+  .pagination__next {
+    left: -20px;
+  }
   .contact__address {
     font-size: 15px;
     line-height: 19px;
@@ -170,9 +191,12 @@
     }
   }
   .pagination {
-    width: 55%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
     &__item {
       width: 10%;
       display: flex;

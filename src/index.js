@@ -55,9 +55,14 @@ $(function () {
     prevArrow: $('.prew-btn'),
     nextArrow: $('.next-btn')
   });
+
   $('.menu__btn').click(function(){
+
     $(this).children().toggleClass('is-active')
+    $(".mobile__menu").slideToggle()
+    
   })
+
   $('.select__display').click(function(){
     $(this).toggleClass('select__display_is-active')
     $(this).find('.select__display_close').toggle()
@@ -74,7 +79,7 @@ $(function () {
         if(footerHtoPos > filterHeight) {            
           $('.filter').css({
             position: 'absolute',
-            zIndex: '99',
+            zIndex: '97',
             bottom: 'unset',
             top: '20px'
           })
@@ -87,7 +92,7 @@ $(function () {
         if(footerHtoPos < filterHeight) {
           $('.filter').css({
             position: 'absolute',
-            zIndex: '99',
+            zIndex: '97',
             bottom: '20px',
             top: 'unset'
           })
@@ -110,4 +115,41 @@ $(function () {
     $(this).hasClass("card__heart__favor") ? $(this).removeClass('card__heart__favor') : $(this).addClass('card__heart__favor')
   })
 
+  $(".modal__alert__close").click(function(){
+    $(this).parent().hide()
+    $("#modal__back").hide()
+  })
+
+  $("#modal__back").click(function(){
+    $(this).hide()
+    $(".modal").hide()
+  })
+
+
+  $(".callback__btn").click(function(){
+    $(".modal__find").show()
+    $("#modal__back").show()
+  })
+
+
+
+  $('.preview__slider_big').not('.slick-initialized').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    variableWidth: true,
+    asNavFor: '.preview'
+  });
+  $('.preview').not('.slick-initialized').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '.preview__slider_big',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true,
+    variableWidth: true,
+    prevArrow: $('.prew-btn'),
+    nextArrow: $('.next-btn')
+  });
 })
