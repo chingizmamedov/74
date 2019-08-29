@@ -107,8 +107,8 @@
             <a href="#" class="contact__form__rule">*нажимая кнопку, Вы соглашаетесь на обработку ваших персональных данных</a>
         </div>
     </div>
-    <div class="modal modal__preview">
-        <span class="modal__alert__close">
+    <div class="modal__preview">
+        <span class="modal__preview__close">
             <img src="assets/close-btn.svg" alt="">
         </span>
         <span class="modal__preview__title">10 000 ₽/месяц, 1 - комнатная квартира, площадь 30 м², этаж 2/5</span>
@@ -118,32 +118,41 @@
                 <div class="preview__slider">
                     <div class="preview__slider__top">
                         <div class="preview__slider_big">
-                            <div class="object__slider_big__item">
-                                <img src="assets/sliderone.jpg" alt="">
+                            <div class="preview__slider_big__item">
+                                <img src="assets/minislider.jpg" alt="">
                             </div>
-                            <div class="object__slider_big__item">
-                                <img src="assets/slidertwo.jpg" alt="">
+                            <div class="preview__slider_big__item">
+                                <img src="assets/minislider.jpg" alt="">
                             </div>
-                            <div class="object__slider_big__item">
-                                <img src="assets/3.jpg" alt="">
+                            <div class="preview__slider_big__item">
+                                <img src="assets/minislider.jpg" alt="">
                             </div>
-                            <div class="object__slider_big__item">
-                                <img src="assets/4.jpg" alt="">
+                            <div class="preview__slider_big__item">
+                                <img src="assets/minislider.jpg" alt="">
                             </div>
-                            <div class="object__slider_big__item">
-                                <img src="assets/5.jpg" alt="">
+                            <div class="preview__slider_big__item">
+                                <img src="assets/minislider.jpg" alt="">
                             </div>
-                            <div class="object__slider_big__item">
-                                <img src="assets/6.jpg" alt="">
+                            <div class="preview__slider_big__item">
+                                <img src="assets/minislider.jpg" alt="">
                             </div>
-                            <div class="object__slider_big__item">
-                                <img src="assets/7.jpg" alt="">
+                            <div class="preview__slider_big__item">
+                                <img src="assets/minislider.jpg" alt="">
                             </div>
                         </div>
                         <span class="prew-btn"></span>
                         <span class="next-btn"></span>
+                        <div class="preview__slider__info">
+                            <span>10 фото</span>
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="card__heart" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"></path>
+                            </svg>
+                            <!-- <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="card__heart" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"/>
+                            </svg> -->
+                        </div>
                     </div>
-                    <div class="preview">
+                    <div class="preview__slider__bottom">
                         <div>
                             <img src="assets/sliderone.jpg" alt="">
                         </div>
@@ -169,69 +178,96 @@
                 </div>
             </div>
         </div>
-        <div class="characters">
-            <div class="conatiner col-10">
-                <div class="row no-gutters">
-                    <div class="col-12 flex-column">
-                        <h3 class="characters__title">Характеристики</h3>
-                        <div class="row no-gutters">
-                            <div class="col-12 col-md-6">
-                                <table class="characters__table">
-                                    <tr>
-                                        <th class="characters__item">Мебель в комнате:</th>
-                                        <th class="characters__item">Есть</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="characters__item">Кухонная мебель:</th>
-                                        <th class="characters__item">Есть</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="characters__item">Лифт:</th>
-                                        <th class="characters__item">Есть</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="characters__item">Балкон/лоджия:</th>
-                                        <th class="characters__item">Есть</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="characters__item">Стиральная машина:</th>
-                                        <th class="characters__item">Есть</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="characters__item">Холодильник:</th>
-                                        <th class="characters__item">Есть</th>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <table class="characters__table offset-md-2 mb-4">
-                                    <tr>
-                                        <th class="characters__item">Мебель в комнате:</th>
-                                        <th class="characters__item">Есть</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="characters__item">Кухонная мебель:</th>
-                                        <th class="characters__item">Есть</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="characters__item">Лифт:</th>
-                                        <th class="characters__item">Есть</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="characters__item">Балкон/лоджия:</th>
-                                        <th class="characters__item">Есть</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="characters__item">Стиральная машина:</th>
-                                        <th class="characters__item">Есть</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="characters__item">Холодильник:</th>
-                                        <th class="characters__item">Есть</th>
-                                    </tr>
-                                </table>
+        <!-- overed -->
+        <div class="modal__overflow">
+            <div class="characters">
+                <div class="conatiner col-10">
+                    <div class="row no-gutters">
+                        <div class="col-12 flex-column">
+                            <h3 class="characters__title">Характеристики</h3>
+                            <div class="row no-gutters">
+                                <div class="col-12 col-md-6">
+                                    <table class="characters__table">
+                                        <tr>
+                                            <th class="characters__item">Мебель в комнате:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Кухонная мебель:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Лифт:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Балкон/лоджия:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Стиральная машина:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Холодильник:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <table class="characters__table offset-md-2 mb-4">
+                                        <tr>
+                                            <th class="characters__item">Мебель в комнате:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Кухонная мебель:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Лифт:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Балкон/лоджия:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Стиральная машина:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Холодильник:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__preview__man">
+                <div class="no-commision">БЕЗ КОМИСИИ</div>
+                <button class="btn btn__reverse btn__man">Подробнее</button>
+                <div class="contacts">
+                    <div class="contacts__header d-flex align-items-sm-stretch">
+                        <div class="contacts__img">
+                            <img src="assets/user.jpg" alt="">
+                        </div>
+                        <div class="contacts__data d-flex flex-column justify-content-between">
+                            <span class="contacts__name">
+                                Имя: Анатолий
+                            </span>
+                            <div class="contacts__tel">
+                                <span>Телефон:</span>
+                                <a href="tel:+735123344">+7 (351) 2-33-44</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__footer">
+                        <span class="callback__block__subtitle">Звонки принимаются с 9 до 21 в будни в СБ и ВС - оставьте обратную связь</span>
+                        <button class="callback__btn">Оставить заявку на подбор</button>
                     </div>
                 </div>
             </div>
@@ -287,7 +323,7 @@
     <!-- Header -->
     <div class="page">
         <div class="container page__container">
-            <div class="d-none d-md-block col-3 filter__main_wrap">
+            <div class="col-3 filter__main_wrap">
                 <!-- fixed Filter block -->
                 <div id="filter" class="filter">
                     <div class="filter__content">
@@ -417,7 +453,7 @@
                         <div class="card">
                             <div class="card__header">
                                 <div class="card__header__detail">
-                                    <span>Быстрый просмотр</span>
+                                    <span class="quick-view">Быстрый просмотр</span>
                                 </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
@@ -440,7 +476,7 @@
                         <div class="card">
                             <div class="card__header">
                                 <div class="card__header__detail">
-                                    <span>Быстрый просмотр</span>
+                                    <span class="quick-view">Быстрый просмотр</span>
                                 </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
@@ -460,7 +496,7 @@
                         <div class="card">
                             <div class="card__header">
                                 <div class="card__header__detail">
-                                    <span>Быстрый просмотр</span>
+                                    <span class="quick-view">Быстрый просмотр</span>
                                 </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
@@ -480,7 +516,7 @@
                         <div class="card">
                             <div class="card__header">
                                 <div class="card__header__detail">
-                                    <span>Быстрый просмотр</span>
+                                    <span class="quick-view">Быстрый просмотр</span>
                                 </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
@@ -500,7 +536,7 @@
                         <div class="card">
                             <div class="card__header">
                                 <div class="card__header__detail">
-                                    <span>Быстрый просмотр</span>
+                                    <span class="quick-view">Быстрый просмотр</span>
                                 </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
@@ -520,7 +556,7 @@
                         <div class="card">
                             <div class="card__header">
                                 <div class="card__header__detail">
-                                    <span>Быстрый просмотр</span>
+                                    <span class="quick-view">Быстрый просмотр</span>
                                 </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
@@ -540,7 +576,7 @@
                         <div class="card">
                             <div class="card__header">
                                 <div class="card__header__detail">
-                                    <span>Быстрый просмотр</span>
+                                    <span class="quick-view">Быстрый просмотр</span>
                                 </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
@@ -560,7 +596,7 @@
                         <div class="card">
                             <div class="card__header">
                                 <div class="card__header__detail">
-                                    <span>Быстрый просмотр</span>
+                                    <span class="quick-view">Быстрый просмотр</span>
                                 </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">

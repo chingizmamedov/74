@@ -18,6 +18,30 @@
 .w-100 {
     width: 100% !important;
 }
+
+.slick-slide img{
+    width: 100%;
+}
+
+.btn {
+    &__man {
+        margin-bottom: 40px;
+    }
+    &__reverse {
+        color: $main;
+        border: 2px solid #4682B4;
+        border-radius: 100px;
+        background: #fff;
+        padding: 10px;
+        min-width: 200px;
+        transition: .3s;
+        &:hover {
+            background: $main;
+            color: #fff;
+        }
+    }
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
@@ -65,11 +89,14 @@ body {
             height: 40px;
             border-radius: 100px;
             border: 1px solid rgba(0, 0, 0, 0.2);
-            margin-left: 20px;
             text-align: center;
+            min-width: 55px;
             &:hover {
                 border: 1px solid rgba(0, 0, 0, 0.6);
             }
+        }
+        &_inp:last-child {
+            margin-left: 20px;
         }
     }
     &__btn, .search__btn {
@@ -641,6 +668,10 @@ body {
     background-image: url('#{$url}fonmodal.png'), url('#{$url}fonmodal2.png');
     background-position: left bottom, right top;
     background-repeat: no-repeat;
+    &__overflow {
+        overflow-y: auto;
+        height: 33vh;
+    }
     &__alert {
         width: 90%;
         max-width: 680px;
@@ -729,19 +760,62 @@ body {
         }
     }
     &__preview {
+        position: fixed;
+        margin: auto;
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        z-index: 99;
+        height: auto;
+        background-image: url('#{$url}fonmodal.png'), url('#{$url}fonmodal2.png');
+        background-position: left bottom, right top;
+        background-repeat: no-repeat;
         max-width: 940px;
         width: 95%;
         top: 2%;
-        right: 0;
+        right: -100%;
         left: auto;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        display: none;
         flex-direction: column;
+        padding: 20px;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: .3s;
+        &__close {
+            width: 30px;
+            height: 3px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            & img {
+                width: 100%;
+            }
+        }
+        &__man {
+            position: absolute;
+            top: 70px;
+            right: 0;
+            flex-grow: 1;
+            width: 47%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & .no-commision {
+                @include fz-bold(20px);
+                color: $main;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+        }
+        &__shown {
+            right: 0px;
+        }
         &__title {
             @include fz-reg(20px);
             color: $main;
-            display: inline-block;
+            display: block;
             width: 80%;
             margin: auto;
             text-align: center;
@@ -749,7 +823,7 @@ body {
         }
         &__subtitle {
             @include fz-reg(20px);
-            display: inline-block;
+            display: block;
             width: 80%;
             margin: auto;
             text-align: center;
@@ -783,11 +857,6 @@ body {
     display: none;
 }
 
-.preview__slider__top {
-    & .slick-slide {
-        // width: 100%;
-    }
-}
 
 .mobile__menu {
     position: absolute;
@@ -807,6 +876,39 @@ body {
         align-items: center;
         & .nav__list__item {
             margin-bottom: 60px;
+        }
+    }
+}
+
+.preview {
+    &__slider {
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        &__bottom {
+            margin-top: -3px;
+            & .slick-slide {
+                width: 120px;
+                height: 120px;
+            }
+            & .slick-list {
+                padding: 0 !important;
+            }
+        }
+        &__top {
+            position: relative;
+        }
+        &__info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
         }
     }
 }

@@ -23,6 +23,13 @@
 }
 
 @media (max-width:769px) {
+  .modal__preview {
+    max-width: 521px;
+  }
+  .modal__preview__man {
+    position: relative;
+    width: 100%;
+  }
   .right-border {
     border: none;
   }
@@ -98,6 +105,16 @@
       margin-top: 0;
     }
   }
+  #filter {
+    width: 88%;
+    max-width: 340px;
+  }
+  .filter__main_wrap {
+    display: none;
+    max-width: 100%;
+    z-index: 81;
+    position: absolute;
+  }
 }
 @media (max-width:760px) {
   .mobile-menu__tel {
@@ -105,6 +122,10 @@
   }
 }
 @media (max-width:576px) {
+  
+  .card__header__detail {
+    display: none;
+  }
   .mobile__menu {
     top: 166px;
   }
