@@ -12,8 +12,267 @@
     <link rel="stylesheet" href="scss/main.css">
     <title>Document</title>
 <link href="main.css" rel="stylesheet"></head>
-
 <body>
+    <div class="mobile__menu">
+        <ul class="mobile__menu__list">
+            <li class="nav__list__item">
+                <a href="#">СПИСКОМ</a>
+            </li>
+            <li class="nav__list__item">
+                <a href="#">НА КАРТЕ</a>
+            </li>
+            <li class="nav__list__item">
+                <a href="#" class="d-flex">
+                    <span style="margin-right: 10px; ">ИЗБРАННОЕ</span>
+                    <svg width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="card__heart__favor" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"></path>
+                    </svg>
+                </a>
+            </li>
+            <li class="nav__list__item">
+                <a href="#">КОНТАКТЫ</a>
+            </li>
+        </ul>
+    </div>
+    <div id="modal__back"></div>
+    <!-- Modal blocks -->
+    <div class="modal modal__alert">
+        <span class="modal__alert__close">
+            <img src="assets/close-btn.svg" alt="">
+        </span>
+        <span>Мы свяжемся с Вами в ближайшее время</span>
+    </div>
+    <div class="modal modal__callback">
+        <span class="modal__alert__close">
+            <img src="assets/close-btn.svg" alt="">
+        </span>
+        <div class="modal__callback__inner d-flex flex-column">
+            <span class="modal__callback__title">Введите личные данные для связи с Вами</span>
+            <input class="search__inp w-100 mb-20" type="text">
+            <input class="search__inp w-100 mb-20" type="text">
+            <button class="search__btn w-100">Обратная связь</button>
+            <a href="#" class="contact__form__rule">*нажимая кнопку, Вы соглашаетесь на обработку ваших персональных данных</a>
+        </div>
+    </div>
+    <div class="modal modal__find">
+        <span class="modal__alert__close">
+            <img src="assets/close-btn.svg" alt="">
+        </span>
+        <span class="modal__find__title">Не нашли подходящий вариант?</span>
+        <span class="modal__find__subtitle">Оставьте заявку и мы сообщим о появлении подходящего варианта</span>
+        <div class="modal__find__inner">
+            <div class="filter__from-to filter__item">
+                <span class="filter__name">Цена:</span>
+                <div class="filter__from-to_inps">
+                    <input type="number" class="filter__from-to_inp" placeholder="от">
+                    <input type="number" class="filter__from-to_inp" placeholder="до">
+                </div>
+            </div>
+            <input class="search__inp w-100 mb-20" type="text" placeholder="Имя">
+            <input class="search__inp w-100 mb-20" type="text" placeholder="Телефон">
+            <div class="d-flex w-100 mb-20 flex-column flex-md-row">
+                <div class="col-12 col-md-6 right-border">
+                    <div class="modal__find__listtitle">Комнаты:</div>
+                    <div class="select__list select__list_shown">
+                        <label class="select__list__item">Комната<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                        <label class="select__list__item">Студия<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                        <label class="select__list__item">1 комната<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                        <label class="select__list__item">2 комнаты<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                        <label class="select__list__item">3 комнаты<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                        <label class="select__list__item">4+ комнат<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-start justify-content-md-end">
+                    
+                    <div class="select__list select__list_shown">
+                        <div class="modal__find__listtitle">Район:</div>
+                        <label class="select__list__item">Центральный<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                        <label class="select__list__item">Курчатовский<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                        <label class="select__list__item">Калининский<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                        <label class="select__list__item">Ленинский<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                        <label class="select__list__item">Металлургический<input class="checkbox" type="checkbox" name="" id=""><span class="checkbox__mask"></span></label>
+                        <label class="select__list__item">Тракторозаводской<input class="checkbox" type="checkbox" name="" id="">
+                                <span class="checkbox__mask"></span>
+                            </label>
+                        <label class="select__list__item">Советский<input class="checkbox" type="checkbox" name="" id="">
+                            <span class="checkbox__mask"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <textarea placeholder="Требование к расположению" class="textarea search__inp w-100 mb-20" name="" id="" cols="30" rows="10"></textarea>
+            <textarea placeholder="Требования к квартире" class="textarea search__inp w-100 mb-20" name="" id="" cols="30" rows="10"></textarea>
+            <textarea placeholder="Состав съемщиков" class="textarea search__inp w-100 mb-20" name="" id="" cols="30" rows="10"></textarea>
+            <button class="search__btn w-100">Оставить заявку на подбор</button>
+            <a href="#" class="contact__form__rule">*нажимая кнопку, Вы соглашаетесь на обработку ваших персональных данных</a>
+        </div>
+    </div>
+    <div class="modal__preview">
+        <span class="modal__preview__close">
+            <img src="assets/close-btn.svg" alt="">
+        </span>
+        <span class="modal__preview__title">10 000 ₽/месяц, 1 - комнатная квартира, площадь 30 м², этаж 2/5</span>
+        <span class="modal__preview__subtitle">Центральный район, Проспект Ленина, дом 86</span>
+        <div class="object__head flex-column">
+            <div class="preview__slider__wrap col-12 col-md-6">
+                <div class="preview__slider">
+                    <div class="preview__slider__top">
+                        <div class="preview__slider_big">
+                            <div class="preview__slider_big__item">
+                                <img src="assets/minislider.jpg" alt="">
+                            </div>
+                            <div class="preview__slider_big__item">
+                                <img src="assets/minislider.jpg" alt="">
+                            </div>
+                            <div class="preview__slider_big__item">
+                                <img src="assets/minislider.jpg" alt="">
+                            </div>
+                            <div class="preview__slider_big__item">
+                                <img src="assets/minislider.jpg" alt="">
+                            </div>
+                            <div class="preview__slider_big__item">
+                                <img src="assets/minislider.jpg" alt="">
+                            </div>
+                            <div class="preview__slider_big__item">
+                                <img src="assets/minislider.jpg" alt="">
+                            </div>
+                            <div class="preview__slider_big__item">
+                                <img src="assets/minislider.jpg" alt="">
+                            </div>
+                        </div>
+                        <span class="prew-btn"></span>
+                        <span class="next-btn"></span>
+                        <div class="preview__slider__info">
+                            <span>10 фото</span>
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="card__heart" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"></path>
+                            </svg>
+                            <!-- <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="card__heart" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"/>
+                            </svg> -->
+                        </div>
+                    </div>
+                    <div class="preview__slider__bottom">
+                        <div>
+                            <img src="assets/sliderone.jpg" alt="">
+                        </div>
+                        <div>
+                                <img src="assets/slidertwo.jpg" alt="">
+                        </div>
+                        <div>
+                                <img src="assets/3.jpg" alt="">
+                        </div>
+                        <div>
+                                <img src="assets/4.jpg" alt="">
+                        </div>
+                        <div>
+                                <img src="assets/5.jpg" alt="">
+                        </div>
+                        <div>
+                                <img src="assets/6.jpg" alt="">
+                        </div>
+                        <div>
+                                <img src="assets/7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- overed -->
+        <div class="modal__overflow">
+            <div class="characters">
+                <div class="conatiner col-10">
+                    <div class="row no-gutters">
+                        <div class="col-12 flex-column">
+                            <h3 class="characters__title">Характеристики</h3>
+                            <div class="row no-gutters">
+                                <div class="col-12 col-md-6">
+                                    <table class="characters__table">
+                                        <tr>
+                                            <th class="characters__item">Мебель в комнате:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Кухонная мебель:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Лифт:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Балкон/лоджия:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Стиральная машина:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Холодильник:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <table class="characters__table offset-md-2 mb-4">
+                                        <tr>
+                                            <th class="characters__item">Мебель в комнате:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Кухонная мебель:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Лифт:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Балкон/лоджия:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Стиральная машина:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="characters__item">Холодильник:</th>
+                                            <th class="characters__item">Есть</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__preview__man">
+                <div class="no-commision">БЕЗ КОМИСИИ</div>
+                <button class="btn btn__reverse btn__man">Подробнее</button>
+                <div class="contacts">
+                    <div class="contacts__header d-flex align-items-sm-stretch">
+                        <div class="contacts__img">
+                            <img src="assets/user.jpg" alt="">
+                        </div>
+                        <div class="contacts__data d-flex flex-column justify-content-between">
+                            <span class="contacts__name">
+                                Имя: Анатолий
+                            </span>
+                            <div class="contacts__tel">
+                                <span>Телефон:</span>
+                                <a href="tel:+735123344">+7 (351) 2-33-44</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__footer">
+                        <span class="callback__block__subtitle">Звонки принимаются с 9 до 21 в будни в СБ и ВС - оставьте обратную связь</span>
+                        <button class="callback__btn">Оставить заявку на подбор</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Header -->
     <header class="header">
         <div class="container header__container">
@@ -46,7 +305,12 @@
                             <a href="#">НА КАРТЕ</a>
                         </li>
                         <li class="nav__list__item">
-                            <a href="#">ИЗБРАННОЕ <img src="assets/heart.svg" alt=""></a>
+                            <a href="#" class="d-flex">
+                                <span style="margin-right: 10px; ">ИЗБРАННОЕ</span>
+                                <svg width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="card__heart__favor" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"/>
+                                </svg>
+                            </a>
                         </li>
                         <li class="nav__list__item">
                             <a href="#">КОНТАКТЫ</a>
@@ -59,7 +323,7 @@
     <!-- Header -->
     <div class="page">
         <div class="container page__container">
-            <div class="d-none d-md-block col-3 filter__main_wrap">
+            <div class="col-3 filter__main_wrap">
                 <!-- fixed Filter block -->
                 <div id="filter" class="filter">
                     <div class="filter__content">
@@ -188,13 +452,18 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span class="quick-view">Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
-                                    <svg class="card__heart card__heart__favor" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"/>
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="card__heart" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"/>
                                     </svg>
-                                    <!-- <img src="assets/heart-contur.svg" alt=""> -->
+                                    <!-- <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="card__heart" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"/>
+                                    </svg> -->
                                 </div>
                             </div>
                             <div class="card__footer">
@@ -206,10 +475,15 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span class="quick-view">Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
-                                    <img src="assets/heart-contur.svg" alt="">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="card__heart" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"/>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="card__footer">
@@ -221,10 +495,15 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span class="quick-view">Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
-                                    <img src="assets/heart-contur.svg" alt="">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="card__heart" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"/>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="card__footer">
@@ -236,10 +515,15 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span class="quick-view">Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
-                                    <img src="assets/heart-contur.svg" alt="">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="card__heart" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"/>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="card__footer">
@@ -251,10 +535,15 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span class="quick-view">Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
-                                    <img src="assets/heart-contur.svg" alt="">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="card__heart" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"/>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="card__footer">
@@ -266,10 +555,15 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span class="quick-view">Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
-                                    <img src="assets/heart-contur.svg" alt="">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="card__heart" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"/>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="card__footer">
@@ -281,10 +575,15 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span class="quick-view">Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
-                                    <img src="assets/heart-contur.svg" alt="">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="card__heart" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"/>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="card__footer">
@@ -296,10 +595,15 @@
                     <div class="card__wrap col-12 col-sm-6 col-xl-4">
                         <div class="card">
                             <div class="card__header">
+                                <div class="card__header__detail">
+                                    <span class="quick-view">Быстрый просмотр</span>
+                                </div>
                                 <img src="assets/cardimg.jpg" alt="">
                                 <div class="card__header__info">
                                     <span>10 фото</span>
-                                    <img src="assets/heart-contur.svg" alt="">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="card__heart" d="M39.4357 11.9697L39.437 11.9855L39.4393 12.0011C39.4768 12.2529 39.6657 13.798 39.1047 16.3519L39.1047 16.3521C38.2967 20.0354 36.4306 23.3849 33.7075 26.04C33.707 26.0405 33.7065 26.0409 33.706 26.0414L19.8833 39.3042L6.29405 26.0408L6.29377 26.0405C3.56992 23.386 1.70331 20.0353 0.895149 16.352L0.89513 16.352C0.334046 13.7969 0.523238 12.2521 0.561127 12.0015L0.56359 11.9852L0.564975 11.9688C1.13347 5.23013 5.53707 0.5 10.8913 0.5C14.4162 0.5 17.5895 2.52824 19.4502 5.95265L19.8847 6.75235L20.3266 5.9567C22.2022 2.57992 25.5168 0.500827 29.1086 0.500827C34.4635 0.500827 38.8664 5.23094 39.4357 11.9697Z" fill="white" stroke="white"/>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="card__footer">
@@ -309,13 +613,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="pagination">
-                    <div class="pagination__item">1</div>
-                    <div class="pagination__item">2</div>
-                    <div class="pagination__item">3</div>
-                    <div class="pagination__item">...</div>
-                    <div class="pagination__item">100</div>
+                <div class="pagination__wrap">
+                    <div class="pagination">
+                        <div class="pagination__item">1</div>
+                        <div class="pagination__item">2</div>
+                        <div class="pagination__item">3</div>
+                        <div class="pagination__item">...</div>
+                        <div class="pagination__item">100</div>
+                    </div>
+                    <div class="pagination__prew"></div>
+                    <div class="pagination__next"></div>
                 </div>
+                
                 <div class="callback__block">
                     <span class="callback__block__title">Не нашли подходящий вариант?</span>
                     <span class="callback__block__subtitle">Оставьте заявку и мы сообщим о появлении подходящего варианта</span>
@@ -371,4 +680,5 @@
 </div>
 </footer>
     <!-- Footer -->
+<script type="text/javascript" src="main.js"></script></body>
 </html>
