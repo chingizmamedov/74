@@ -55,8 +55,8 @@ $(function () {
     infinite: true,
     focusOnSelect: true,
     variableWidth: true,
-    prevArrow: $('.prew-btn'),
-    nextArrow: $('.next-btn')
+    nextArrow: $('.prew-btn'),
+    prewArrow: $('.next-btn')
   });
 
   $('.object__slider_big').not('.slick-initialized').slick({
@@ -74,9 +74,8 @@ $(function () {
     dots: false,
     centerMode: true,
     focusOnSelect: true,
-    // variableWidth: true,
-    prevArrow: $('.prew-btn'),
-    nextArrow: $('.next-btn')
+    prevArrow: $('.next-btn'),
+    nextArrow: $('.prew-btn')
   });
 
   $('.menu__btn').click(function(){
